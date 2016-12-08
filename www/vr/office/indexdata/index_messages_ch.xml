@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<krpano>
+
+
+  <data name="ch_project_title"><![CDATA[Eyexpo办公室]]></data>
+
+
+
+  <data name="ch_pano136_title"><![CDATA[outside]]></data>
+  <data name="ch_spotpoint147_tooltip"><![CDATA[Eyexpo]]></data>
+
+
+  <data name="ch_pano131_title"><![CDATA[hall1]]></data>
+  <data name="ch_spotpoint148_tooltip"><![CDATA[Elevator]]></data>
+  <data name="ch_spotpoint582_tooltip"><![CDATA[Outdoor]]></data>
+
+
+  <data name="ch_pano132_title"><![CDATA[hall2]]></data>
+  <data name="ch_spotpoint149_tooltip"><![CDATA[The 12th Floor]]></data>
+  <data name="ch_spotpoint581_tooltip"><![CDATA[Hall]]></data>
+
+
+  <data name="ch_pano129_title"><![CDATA[frontdesk1]]></data>
+  <data name="ch_spotpoint150_tooltip"><![CDATA[Meeting Room]]></data>
+  <data name="ch_spotpoint161_tooltip"><![CDATA[Corridor]]></data>
+  <data name="ch_spotpoint580_tooltip"><![CDATA[Ground Floor]]></data>
+
+
+  <data name="ch_pano130_title"><![CDATA[frontdesk2]]></data>
+  <data name="ch_spotpoint152_tooltip"><![CDATA[Marketing Department]]></data>
+  <data name="ch_spotpoint154_tooltip"><![CDATA[President Office]]></data>
+  <data name="ch_spotpoint155_tooltip"><![CDATA[IT Department]]></data>
+  <data name="ch_spotpoint156_tooltip"><![CDATA[Front Desk]]></data>
+
+
+  <data name="ch_pano145_title"><![CDATA[boss]]></data>
+  <data name="ch_spotpoint157_tooltip"><![CDATA[Corridor]]></data>
+
+
+  <data name="ch_pano133_title"><![CDATA[it]]></data>
+  <data name="ch_spotpoint160_tooltip"><![CDATA[Corridor]]></data>
+
+
+  <data name="ch_pano134_title"><![CDATA[marketing]]></data>
+  <data name="ch_spotpoint153_tooltip"><![CDATA[Corridor]]></data>
+
+
+  <data name="ch_pano135_title"><![CDATA[meeting room]]></data>
+  <data name="ch_spotpoint151_tooltip"><![CDATA[Corridor]]></data>
+
+
+
+
+
+
+  <data name="ch_buttontooltip"><![CDATA[]]></data>
+  <data name="ch_buttonopenurlwebsiteurl"><![CDATA[http://www.eyexpo.com/vr/office/warning.html]]></data>
+  <data name="ch_contextmenuopenFsLabel"><![CDATA[Enter Fullscreen]]></data>
+  <data name="ch_contextmenucloseFsLabel"><![CDATA[Exit Fullscreen]]></data>
+  <data name="ch_contextmenunormallabel"><![CDATA[Normal View]]></data>
+  <data name="ch_contextmenufisheyelabel"><![CDATA[Fisheye View]]></data>
+  <data name="ch_contextmenuarchitecturallabel"><![CDATA[Architectural View]]></data>
+  <data name="ch_contextmenulittleplanetlabel"><![CDATA[Little Planet View]]></data>
+  <data name="ch_logowebsiteurl"><![CDATA[http://www.eyexpo.com]]></data>
+
+
+  <data name="ch_vr_setup_hmd0"><![CDATA[SELECT YOUR HMD]]></data>
+  <data name="ch_vr_setup_advanced"><![CDATA[ADVANCED SETTINGS]]></data>
+  <data name="ch_vr_setup_title"><![CDATA[WEB VR SETTINGS]]></data>
+  <data name="ch_vr_setup_dvn1"><![CDATA[Device:]]></data>
+  <data name="ch_vr_setup_siz1"><![CDATA[Screen size:]]></data>
+  <data name="ch_vr_setup_ipd1"><![CDATA[IPD:]]></data>
+  <data name="ch_vr_setup_hmd1"><![CDATA[HMD:]]></data>
+  <data name="ch_vr_setup_hmd3"><![CDATA[Customize]]></data>
+  <data name="ch_vr_setup_cal"><![CDATA[Calibrate gyroscope]]></data>
+  <data name="ch_vr_setup_sav"><![CDATA[SAVE]]></data>
+  <data name="ch_vr_setup_rst"><![CDATA[RESET]]></data>
+  <data name="ch_vr_setup_simple"><![CDATA[SIMPLE]]></data>
+  <data name="ch_vr_setup_cls"><![CDATA[CLOSE]]></data>
+  <data name="ch_vr_setup_m31"><![CDATA[HMD SETTINGS]]></data>
+  <data name="ch_vr_setup_fov1"><![CDATA[FOV:]]></data>
+  <data name="ch_vr_setup_dst1"><![CDATA[Distortion:]]></data>
+  <data name="ch_vr_setup_d2tx"><![CDATA[Distortion 2:]]></data>
+  <data name="ch_vr_setup_vig1"><![CDATA[Vignette:]]></data>
+  <data name="ch_vr_setup_cac1"><![CDATA[Chromatic aberration:]]></data>
+  <data name="ch_vr_setup_olp1"><![CDATA[Overlap:]]></data>
+  <data name="ch_vr_setup_m35"><![CDATA[RETURN]]></data>
+  <data name="ch_vr_setup_cb1"><![CDATA[GYROSCOPE]]></data>
+  <data name="ch_vr_setup_cb2"><![CDATA[Place the device on a flat and[br]stable surface and tab CALIBRATE[br]to correct a gyroscope drifting.]]></data>
+  <data name="ch_vr_setup_cb3"><![CDATA[CALIBRATE]]></data>
+  <data name="ch_vr_setup_cb4"><![CDATA[RESET]]></data>
+  <data name="ch_vr_setup_cb5"><![CDATA[RETURN]]></data>
+  <data name="ch_vr_setup_cb6"><![CDATA[Calibrating...]]></data>
+  <data name="ch_vr_setup_cb7"><![CDATA[Successful calibration]]></data>
+  <data name="ch_vr_setup_cb8"><![CDATA[Calibration failed]]></data>
+  <data name="ch_vr_setup_unavailable"><![CDATA[VR mode[br]is unavailable on your device]]></data>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</krpano>
