@@ -9,14 +9,38 @@ app.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('index', {
             url: '/',
-            templateUrl: 'template/home.html'
+            templateUrl: 'template/home.html',
+            controller: 'IndexCtrl'
         })
         .state('panoview', {
-            url: '/pano',
+            url: '/pano/:id',
             templateUrl: 'template/panopage.html',
             controller: 'PanoCtrl'
         });
     $urlRouterProvider.otherwise('/');
+});
+
+app.service('PanoDataService', function($http) {
+    var panoData = [
+        {
+          index: 0,
+          image: 'vr/office/indexdata/thumbnail.jpg',
+          panoUrl: 'vr/office/index.html'
+        },
+        {
+          index: 1,
+          image: 'vr/hotpot/krpano/hotspot.jpg',
+          panoUrl: 'vr/hotpot/krpano/index.html'
+        }
+    ];
+
+    this.getByIndex = function(index) {
+      return panoData[index];
+    }
+
+    this.getAll = function() {
+      return panoData;
+    }
 });
 
 app.controller('MainCtrl', function($scope) {
@@ -25,7 +49,12 @@ app.controller('MainCtrl', function($scope) {
     };
 });
 
-app.controller('PanoCtrl', function($scope) {
+app.controller('IndexCtrl', function($scope, PanoDataService) {
+    $scope.panoData = PanoDataService.getAll();
+});
+
+app.controller('PanoCtrl', function($scope, $stateParams, PanoDataService) {
+    $scope.panoUrl = PanoDataService.getByIndex($stateParams.id).panoUrl
     $scope.$on('$ionicView.loaded', function(event) {
         console.log('enter panopage');
         var viewFrame = angular.element(document.querySelector('#PanoView'));
@@ -33,13 +62,6 @@ app.controller('PanoCtrl', function($scope) {
         s.type = "text/javascript";
         s.src = "js/pano.js";
         viewFrame.append(s);
-        // if (viewFrame != null) { //if the container is visible on the page
-        //     viewFrame.contentWindow.open = function(url, windowName, windowFeatures) {
-        //         // do whatever you want here (e.g. open an ajax modal frame)
-        //         // window.alert(url);
-        //         viewFrame.setAttribute("src", "office/index.html?vr");
-        //     };
-        // }
     });
 });
 
