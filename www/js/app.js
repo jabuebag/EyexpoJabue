@@ -21,25 +21,22 @@ app.config(function($stateProvider, $urlRouterProvider) {
 });
 
 app.service('PanoDataService', function($http) {
-    var panoData = [
-        {
-          index: 0,
-          image: 'vr/office/indexdata/thumbnail.jpg',
-          panoUrl: 'vr/office/index.html'
-        },
-        {
-          index: 1,
-          image: 'vr/hotpot/krpano/hotspot.jpg',
-          panoUrl: 'vr/hotpot/krpano/krpano.html?xml=videopano.xml'
-        }
-    ];
+    var panoData = [{
+        index: 0,
+        image: 'vr/office/indexdata/thumbnail.jpg',
+        panoUrl: 'vr/office/index.html'
+    }, {
+        index: 1,
+        image: 'vr/hotpot/krpano/hotspot.jpg',
+        panoUrl: 'vr/hotpot/krpano/krpano.html?xml=videopano.xml'
+    }];
 
     this.getByIndex = function(index) {
-      return panoData[index];
+        return panoData[index];
     }
 
     this.getAll = function() {
-      return panoData;
+        return panoData;
     }
 });
 
@@ -54,7 +51,10 @@ app.controller('IndexCtrl', function($scope, PanoDataService) {
 });
 
 app.controller('PanoCtrl', function($scope, $stateParams, PanoDataService) {
+    var mql = window.matchMedia("(orientation: portrait)");
     $scope.panoUrl = PanoDataService.getByIndex($stateParams.id).panoUrl
+    $scope.windowHeight = window.screen.height;
+    $scope.windowWidth = window.screen.width;
     $scope.$on('$ionicView.loaded', function(event) {
         console.log('enter panopage');
         var viewFrame = angular.element(document.querySelector('#PanoView'));
