@@ -21,12 +21,22 @@ app.config(function($stateProvider, $urlRouterProvider) {
 });
 
 app.service('PanoDataService', function($http) {
-    var panoData = [{
+    var panoData = [
+    {
         index: 0,
+        name: 'Office',
         image: 'vr/office/indexdata/thumbnail.jpg',
         panoUrl: 'vr/office/index.html'
-    }, {
+    },
+    {
         index: 1,
+        name: 'Alien',
+        image: 'vr/alien/alien.jpg',
+        panoUrl: 'vr/alien/krpano.html?xml=videopano.xml'
+    },  
+    {
+        index: 2,
+        name: 'Hotpot',
         image: 'vr/hotpot/krpano/hotspot.jpg',
         panoUrl: 'vr/hotpot/krpano/krpano.html?xml=videopano.xml'
     }];
@@ -50,18 +60,19 @@ app.controller('IndexCtrl', function($scope, PanoDataService) {
     $scope.panoData = PanoDataService.getAll();
 });
 
-app.controller('PanoCtrl', function($scope, $stateParams, PanoDataService) {
-    var mql = window.matchMedia("(orientation: portrait)");
-    $scope.panoUrl = PanoDataService.getByIndex($stateParams.id).panoUrl
-    $scope.windowHeight = window.screen.height;
-    $scope.windowWidth = window.screen.width;
+app.controller('PanoCtrl', function($scope, $stateParams, PanoDataService, $ionicHistory) {
+    $scope.goBack = function() {
+        $ionicHistory.goBack();
+    };
     $scope.$on('$ionicView.loaded', function(event) {
-        console.log('enter panopage');
         var viewFrame = angular.element(document.querySelector('#PanoView'));
         var s = document.createElement("script");
         s.type = "text/javascript";
         s.src = "js/pano.js";
         viewFrame.append(s);
+    });
+    $scope.$on('$ionicView.enter', function(event) {
+        $scope.panoUrl = PanoDataService.getByIndex($stateParams.id).panoUrl
     });
 });
 
