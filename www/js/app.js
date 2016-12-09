@@ -30,7 +30,7 @@ app.service('PanoDataService', function($http) {
         {
           index: 1,
           image: 'vr/hotpot/krpano/hotspot.jpg',
-          panoUrl: 'vr/hotpot/krpano/index.html'
+          panoUrl: 'vr/hotpot/krpano/krpano.html?xml=videopano.xml'
         }
     ];
 
