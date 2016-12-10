@@ -21,20 +21,17 @@ app.config(function($stateProvider, $urlRouterProvider) {
 });
 
 app.service('PanoDataService', function($http) {
-    var panoData = [
-    {
+    var panoData = [{
         index: 0,
         name: 'Office',
         image: 'vr/office/indexdata/thumbnail.jpg',
         panoUrl: 'vr/office/index.html'
-    },
-    {
+    }, {
         index: 1,
         name: 'Alien',
         image: 'vr/alien/alien.jpg',
         panoUrl: 'vr/alien/krpano.html?xml=videopano.xml'
-    },  
-    {
+    }, {
         index: 2,
         name: 'Hotpot',
         image: 'vr/hotpot/krpano/hotspot.jpg',
@@ -56,8 +53,20 @@ app.controller('MainCtrl', function($scope) {
     };
 });
 
-app.controller('IndexCtrl', function($scope, PanoDataService) {
+app.controller('IndexCtrl', function($scope, PanoDataService, $ionicPopover, $state) {
     $scope.panoData = PanoDataService.getAll();
+    $ionicPopover.fromTemplateUrl('template/popover.html', {
+        scope: $scope
+    }).then(function(popover) {
+        $scope.popover = popover;
+    });
+    $scope.openPopover = function($event) {
+        $scope.popover.show($event);
+    };
+    $scope.goPage = function(index) {
+        $state.go('panoview', {id: index});
+        $scope.popover.hide();
+    };
 });
 
 app.controller('PanoCtrl', function($scope, $stateParams, PanoDataService, $ionicHistory) {

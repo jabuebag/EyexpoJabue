@@ -1,0 +1,12 @@
+<ion-popover-view>
+    <ion-header-bar>
+        <h1 class="title">VR List</h1>
+    </ion-header-bar>
+    <ion-content>
+        <ul class="list">
+            <a class="item" ng-repeat='pano in panoData' ng-click="goPage({{pano.index}})">
+                {{pano.name}}
+            </a>
+        </ul>
+    </ion-content>
+</ion-popover-view>
