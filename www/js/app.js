@@ -28,11 +28,16 @@ app.service('PanoDataService', function($http) {
         panoUrl: 'vr/office/index.html'
     }, {
         index: 1,
+        name: 'Vancouver',
+        image: 'vr/vancouver/indexdata/thumbnail.jpg',
+        panoUrl: 'vr/vancouver/index.html'
+    }, {
+        index: 2,
         name: 'Alien',
         image: 'vr/alien/alien.jpg',
         panoUrl: 'vr/alien/krpano.html?xml=videopano.xml'
     }, {
-        index: 2,
+        index: 3,
         name: 'Hotpot',
         image: 'vr/hotpot/krpano/hotspot.jpg',
         panoUrl: 'vr/hotpot/krpano/krpano.html?xml=videopano.xml'
@@ -64,7 +69,7 @@ app.controller('IndexCtrl', function($scope, PanoDataService, $ionicPopover, $st
         $scope.popover.show($event);
     };
     $scope.goPage = function(index) {
-        $state.go('panoview', {id: index});
+        $state.go('panoview', { id: index });
         $scope.popover.hide();
     };
 });
@@ -74,14 +79,12 @@ app.controller('PanoCtrl', function($scope, $stateParams, PanoDataService, $ioni
         $ionicHistory.goBack();
     };
     $scope.$on('$ionicView.loaded', function(event) {
+        $scope.panoUrl = PanoDataService.getByIndex($stateParams.id).panoUrl
         var viewFrame = angular.element(document.querySelector('#PanoView'));
         var s = document.createElement("script");
         s.type = "text/javascript";
         s.src = "js/pano.js";
         viewFrame.append(s);
-    });
-    $scope.$on('$ionicView.enter', function(event) {
-        $scope.panoUrl = PanoDataService.getByIndex($stateParams.id).panoUrl
     });
 });
 
