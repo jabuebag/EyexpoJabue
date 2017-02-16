@@ -21,27 +21,71 @@ app.config(function($stateProvider, $urlRouterProvider) {
 });
 
 app.service('PanoDataService', function($http) {
-    var panoData = [{
-        index: 0,
-        name: 'Office',
-        image: 'vr/office/indexdata/thumbnail.jpg',
-        panoUrl: 'vr/office/index.html'
-    }, {
-        index: 1,
-        name: 'Vancouver',
-        image: 'vr/vancouver/indexdata/thumbnail.jpg',
-        panoUrl: 'vr/vancouver/index.html'
-    }, {
-        index: 2,
-        name: 'Alien',
-        image: 'vr/alien/alien.jpg',
-        panoUrl: 'vr/alien/krpano.html?xml=videopano.xml'
-    }, {
-        index: 3,
-        name: 'Hotpot',
-        image: 'vr/hotpot/krpano/hotspot.jpg',
-        panoUrl: 'vr/hotpot/krpano/krpano.html?xml=videopano.xml'
-    }];
+    var panoData = [ 
+        {
+            index: 0,
+            name: 'demo 1',
+            image: 'vr/shopping/images/sky.jpg',
+            panoUrl: 'vr/shopping/index.html',
+            description: 'The VR show of ammolite 1.'
+        },
+        {
+            index: 1,
+            name: 'demo 2',
+            image: 'vr/shoppingAframeJquery/images/sky.jpg',
+            panoUrl: 'vr/shoppingAframeJquery/index.html',
+            description: 'The VR show of ammolite 2.'
+        }
+        // {
+        //     index: 2,
+        //     name: 'SFU',
+        //     image: 'vr/sfu/indexdata/thumbnail.jpg',
+        //     panoUrl: 'vr/sfu/index.html',
+        //     description: 'Simon Fraser University VR show.'
+        // },
+        // {
+        //     index: 3,
+        //     name: 'Office',
+        //     image: 'vr/newoffice/indexdata/thumbnail.jpg',
+        //     panoUrl: 'vr/newoffice/index.html',
+        //     description: 'VR show of EYEXPO office.'
+        // },
+        // {
+        //     index: 4,
+        //     name: 'Canada Place',
+        //     image: 'vr/canadaplace/canadaPlace.jpg',
+        //     panoUrl: 'vr/canadaplace/krpano.html?xml=videopano.xml',
+        //     description: 'VR video show of canada place.'
+        // },  
+        // {
+        //     index: 5,
+        //     name: 'Driving Car',
+        //     image: 'vr/driving/indexdata/thumbnail.jpg',
+        //     panoUrl: 'vr/driving/index.html',
+        //     description: 'VR video of Benz driving advertisement.'
+        // }, 
+        // {
+        //     index: 6,
+        //     name: 'Vancouver',
+        //     image: 'vr/vancouver/indexdata/thumbnail.jpg',
+        //     panoUrl: 'vr/vancouver/index.html',
+        //     description: 'VR show of Vancouver view.'
+        // }, 
+        // {
+        //     index: 7,
+        //     name: 'Alien',
+        //     image: 'vr/alien/alien.jpg',
+        //     panoUrl: 'vr/alien/krpano.html?xml=videopano.xml',
+        //     description: 'Alien VR movie'
+        // }, 
+        // {
+        //     index: 8,
+        //     name: 'Hotpot',
+        //     image: 'vr/hotpot/krpano/hotspot.jpg',
+        //     panoUrl: 'vr/hotpot/krpano/krpano.html?xml=videopano.xml',
+        //     description: 'VR video show of ChaoTianMen hotpot.'
+        // }
+    ];
 
     this.getByIndex = function(index) {
         return panoData[index];
